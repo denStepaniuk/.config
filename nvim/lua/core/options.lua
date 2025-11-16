@@ -1,4 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd("set fillchars=eob:\\ ") -- allow to hide tilda '~' symbols
 
 local opt = vim.opt -- for conciseness
 

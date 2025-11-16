@@ -1,44 +1,31 @@
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      -- "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      vim.keymap.set('n', '<leader>n', ':Neotree<CR>') -- open tree
-      vim.keymap.set('n', '<leader>nc', ':Neotree close<CR>') -- close tree
-    end
-  },
-  {
-    "antosha417/nvim-lsp-file-operations",
-    dependencies = {
-      -- "nvim-lua/plenary.nvim",
-      "nvim-neo-tree/neo-tree.nvim", -- makes sure that this loads after Neo-tree.
-    },
-    config = function()
-      require("lsp-file-operations").setup()
-    end,
-  },
-  {
-    "s1n7ax/nvim-window-picker",
-    version = "2.*",
-    config = function()
-      require("window-picker").setup({
-        filter_rules = {
-          include_current_win = false,
-          autoselect_one = true,
-          -- filter using buffer options
-          bo = {
-            -- if the file type is one of following, the window will be ignored
-            filetype = { "neo-tree", "neo-tree-popup", "notify" },
-            -- if the buffer type is one of following, the window will be ignored
-            buftype = { "terminal", "quickfix" },
-          },
-        },
-      })
-    end,
-  },
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		lazy = false,
+		config = function()
+			require("neo-tree").setup({
+				filesystem = {
+					window = {
+						mappings = {
+							["P"] = "toggle_preview", -- press P to toggle preview window
+						},
+					},
+					components = {
+						preview = true, -- enable the preview component
+					},
+					use_libuv_file_watcher = true,
+				},
+			})
+
+			vim.keymap.set("n", "<leader>nn", ":Neotree<CR>", { desc = "Open explorer" })
+			vim.keymap.set("n", "<leader>nc", ":Neotree close<CR>", { desc = "Close explorer" })
+			vim.keymap.set("n", "<leader>nr", ":Neotree reveal<CR>", { desc = "Reveal current file in explorer" })
+		end,
+	},
 }
