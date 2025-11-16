@@ -30,3 +30,15 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- Navigate splits in NORMAL mode
+keymap.set("n", "<C-h>", "<C-w>h")
+keymap.set("n", "<C-j>", "<C-w>j")
+keymap.set("n", "<C-k>", "<C-w>k")
+keymap.set("n", "<C-l>", "<C-w>l")
+
+-- Navigate splits in TERMINAL mode
+keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]])
+keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]])
+keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]])
+keymap.set("t", "<C-l>", [[<C-\><C-n><C-w>l]])
