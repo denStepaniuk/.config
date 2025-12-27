@@ -34,7 +34,7 @@
   },
   "autosave": "on_focus_change",
   "cursor_blink": false,
-  "theme": "Ayu Dark",
+  "theme": "Gruber Darker",
   // "base_keymap": "JetBrains",
   "vim_mode": true,
 }
