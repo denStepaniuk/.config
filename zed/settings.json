@@ -1,0 +1,40 @@
+{
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5"
+    },
+    "default_profile": "ask",
+    "always_allow_tool_actions": true,
+    "model_parameters": [],
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "current_line_highlight": "none",
+  "relative_line_numbers": "enabled",
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": false,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true,
+  },
+  "autosave": "on_focus_change",
+  "cursor_blink": false,
+  "theme": "Ayu Dark",
+  // "base_keymap": "JetBrains",
+  "vim_mode": true,
+}
