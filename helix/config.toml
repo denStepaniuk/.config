@@ -1,0 +1,4 @@
+theme = "yellowed-my"
+
+[editor]
+line-number = "relative"
