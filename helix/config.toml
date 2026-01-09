@@ -2,3 +2,9 @@ theme = "yellowed-my"
 
 [editor]
 line-number = "relative"
+clipboard-provider = "pasteboard"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
