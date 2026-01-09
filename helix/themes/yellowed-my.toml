@@ -21,9 +21,9 @@
 "punctuation"                     = { fg = "text" }
 "punctuation.special"             = { fg = "constants", modifiers = ["bold"] }
 "keyword"                         = { fg = "keywords" }
-"keyword.control"                 = { fg = "control" }
+"keyword.control"                 = { fg = "keywords" }
 "keyword.control.return"          = { fg = "keywords", modifiers = ["bold"] }
-"keyword.operator"                = { fg = "k_operator" }
+"keyword.operator"                = { fg = "operator" }
 "keyword.directive"               = { fg = "keywords" }
 "operator"                        = { fg = "yellow" }
 "function"                        = { fg = "text", modifiers = ["bold"] }
