@@ -9,11 +9,14 @@ config.font_size = 16
 config.font = wezterm.font('JetBrains Mono')
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
+
+-- colors to adopt "my-e=yellowed theme and spread it on terminal"
 config.colors = {
-  cursor_bg = '#FFCE54'
+  cursor_bg = '#FFCE54',
+  background = "#242424"
 }
 
-config.color_scheme = 'tokyonight_night'
+config.color_scheme = 'Gruber (base16)'
 
 
 return config
