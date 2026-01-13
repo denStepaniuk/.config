@@ -1,0 +1,4 @@
+# extensions:
+ - vim
+ - vim-enchanced (vim action and ecosystem)
+ - yellowed or tsodin theme (gruber)
