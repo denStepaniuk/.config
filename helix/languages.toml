@@ -1,2 +1,30 @@
 # here comes specififc language settings for helix, btw helix has defoult setup for almoust all known.
 # see on helix-editor repo: 'languages.toml'
+
+[[language]]
+name = "java"
+scope = "source.java"
+file-types = ["java"]
+roots = ["pom.xml"]
+
+[language-server.jdtls]
+command = "java"
+
+args = [
+  "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+  "-Dosgi.bundles.defaultStartLevel=4",
+  "-Declipse.product=org.eclipse.jdt.ls.core.product",
+  "-Dlog.level=ALL",
+  "-Xmx2G",
+
+  "--add-modules=ALL-SYSTEM",
+  "--add-opens", "java.base/java.util=ALL-UNNAMED",
+  "--add-opens", "java.base/java.lang=ALL-UNNAMED",
+
+  # Lombok (only if your project uses it)
+  # "-javaagent:/Users/odith/.local/share/nvim/mason/packages/jdtls/lombok.jar",
+
+  "-jar", "/Users/odith/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar",
+  "-configuration", "/Users/odith/.local/share/nvim/mason/packages/jdtls/config_mac_arm",
+  "-data", "/Users/odith/.cache/helix/jdtls"
+]
