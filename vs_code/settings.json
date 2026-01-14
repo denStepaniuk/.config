@@ -49,7 +49,7 @@
       },
       {
         "scope": [
-          "keyword.control.java",
+          "keyword.control.java"
         ],
         "settings": {
           "foreground": "#FFD700",
@@ -91,5 +91,5 @@
     ]
   },
   "redhat.telemetry.enabled": false,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-mocha"
 }
