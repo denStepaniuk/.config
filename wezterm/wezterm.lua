@@ -9,6 +9,7 @@ config.font_size = 16
 config.font = wezterm.font('JetBrains Mono')
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
+config.audible_bell = "Disabled"
 
 -- colors to adopt "my-e=yellowed theme and spread it on terminal"
 config.colors = {
