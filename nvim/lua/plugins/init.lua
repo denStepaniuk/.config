@@ -14,7 +14,7 @@ return {
   },
 
   -- test new blink
-  { import = "nvchad.blink.lazyspec" },
+  -- { import = "nvchad.blink.lazyspec" },
 
   {
   	"nvim-treesitter/nvim-treesitter",
@@ -22,7 +22,7 @@ return {
       auto_install = true;
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css"
+       "html", "css", "python"
   		},
   	},
   },
