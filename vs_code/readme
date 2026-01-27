@@ -1,4 +1,5 @@
 # extensions:
  - vim
- - vim-enchanced (vim action and ecosystem)
+ - Vim Pre Shortcut Keys
+ # - vim-enchanced (vim action and ecosystem) current no more reliable
  - yellowed or tsodin theme (gruber)

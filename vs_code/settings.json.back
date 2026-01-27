@@ -1,0 +1,95 @@
+{
+  "terminal.integrated.fontSize": 12,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSave": "onFocusChange",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.tabSize": 2,
+  "editor.lineHeight": 1.6,
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "none",
+  "editor.bracketPairColorization.enabled": false,
+  "breadcrumbs.enabled": false,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": false,
+  "workbench.colorTheme": "yellowed",
+  "workbench.activityBar.location": "top",
+  "workbench.tree.indent": 15,
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.renderIndentGuides": "onHover",
+  "workbench.editor.showTabs": "single",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorCustomizations": {
+    "focusBorder": "#fff20000", // additional border for focus highlights
+    "editor.foreground": "#ffffffe3", // color of the text
+    "editor.wordHighlightBackground": "#00000000", // transparent background
+    "editor.wordHighlightBorder": "#ffff00", // yellow border
+    "editor.wordHighlightStrongBackground": "#00000000", // transparent background for write access
+    "editor.wordHighlightStrongBorder": "#ffff00", // yellow border for write access
+    "editorError.foreground": "#f53333",
+    "editorWarning.foreground": "#F1FA8C",
+    "editorInfo.foreground": "#8BE9FD",
+    "editorHint.foreground": "#50FA7B"
+  },
+  "editor.semanticHighlighting.enabled": false,
+  "editor.tokenColorCustomizations": {
+    "strings": "#99d282",
+    "textMateRules": [
+      {
+        "scope": "entity.name.function.java",
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "keyword.control.java"
+        ],
+        "settings": {
+          "foreground": "#FFD700",
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "storage.type.primitive.java",
+          "storage.modifier.java",
+          "storage.type.java",
+          "storage.type.class.java",
+          "variable.other.java",
+          "storage.type.local.java",
+          "keyword.control.new.java"
+        ],
+        "settings": {
+          "foreground": "#888888",
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "constant.numeric"
+        ],
+        "settings": {
+          "foreground": "#17e8b7d7"
+        }
+      },
+      {
+        "scope": [
+          "comment",
+          "punctuation.definition.comment"
+        ],
+        "settings": {
+          "foreground": "#edc58a"
+        }
+      }
+    ]
+  },
+  "redhat.telemetry.enabled": false,
+  "workbench.iconTheme": "catppuccin-mocha"
+}
