@@ -1,0 +1,7 @@
+# GitHub CLI settings
+gh/*
+.gh/
+
+#lazygit
+.lazygit/
+lazygit/

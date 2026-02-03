@@ -1,32 +1,49 @@
 {
-    "terminal.integrated.fontSize": 12,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    "editor.minimap.enabled": false,
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "JetBrains Mono",
-    "editor.tabSize": 2,
-    "editor.lineHeight": 1.6,
-    "editor.fontSize": 14,
+    "editor.lineNumbers": "relative", // shows relative line number in crumbs leftside
     "editor.fontLigatures": true,
+    "editor.fontFamily": "'JetbrainsMono Nerd Font', 'monospace'",
+    "editor.fontWeight": "400",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
     "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "none", // enable white spaces rendering as indents 
+    "editor.renderLineHighlight": "none", // whether render line under coursoure or not 
     "editor.cursorSmoothCaretAnimation": "off",
-    "editor.lineNumbers": "relative",
-    "editor.renderLineHighlight": "none",
+    "editor.scrollbar.vertical": "hidden", // hide scrollbars from side abd bottom
+    "editor.scrollbar.horizontal": "hidden",
+    "explorer.compactFolders": false, // whether or not concatenate folders in ine row 
     "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairsHorizontal": false,
     "breadcrumbs.enabled": false,
-    "git.confirmSync": false,
+    "editor.formatOnSave": false,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true, // inserts empty line in the end
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.tabs.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "git.enableSmartCommit": false,
-    "workbench.colorTheme": "yellowed",
-    "workbench.activityBar.location": "top",
-    "workbench.tree.indent": 15,
+    "explorer.confirmDelete": false,
     "workbench.tree.expandMode": "singleClick",
-    "workbench.tree.renderIndentGuides": "onHover",
+    "workbench.activityBar.location": "top",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
     "workbench.editor.showTabs": "single",
-    "explorer.confirmDragAndDrop": false,
+    "workbench.tree.renderIndentGuides": "onHover",
+    "workbench.tree.indent": 15,
+    // VIM related
+    // "vim.leader": " ", // plugins have to manage it
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "gold",
+    "vim.highlightedyank.duration": 300,
+    "vim.highlightedyank.textColor": "black",
+    "vim.searchHighlightColor": "orange",
+    "vim.searchHighlightTextColor": "black",
+    "vim.searchMatchColor": "white",
+    "vim.searchMatchTextColor": "black",
     "workbench.colorCustomizations": {
+        "editorBracketMatch.border": "#d7e914",
         "focusBorder": "#fff200a0", // additional border for focus highlights
         "editor.foreground": "#ffffffc0", // color of the text
         "editor.wordHighlightBackground": "#00000000", // transparent background
@@ -51,6 +68,7 @@
             {
                 "scope": [
                     "keyword.control.java",
+                    "keyword.control.flow.python"
                 ],
                 "settings": {
                     "foreground": "#FFD700",
@@ -129,7 +147,8 @@
             }
         ]
     },
-    "redhat.telemetry.enabled": false,
-    "workbench.iconTheme": "catppuccin-mocha",
-    "terminal.integrated.tabs.enabled": false
+    "workbench.colorTheme": "yellowed",
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "python.analysis.typeCheckingMode": "off",
 }
