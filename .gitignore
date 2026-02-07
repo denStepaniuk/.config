@@ -2,6 +2,14 @@
 gh/*
 .gh/
 
-#lazygit
+# lazygit
 .lazygit/
 lazygit/
+
+# zed 
+zed/prompts
+
+# other
+cagent/
+iterm2/
+

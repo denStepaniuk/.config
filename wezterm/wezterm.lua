@@ -11,14 +11,15 @@ config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.audible_bell = "Disabled"
 
-config.cursor_bg = "#ffd700"
-config.cursor_fg = "#1c1c1c"
-config.cursor_border_color = "#ffd700"
-
 config.colors = {
+  -- Cursor
+  cursor_bg     = "#ffd700",  -- gold fill
+  cursor_fg     = "#1c1c1c",  -- dark text visible inside
+  cursor_border = "#ffd700",  -- (optional) border same gold
+
   -- Background and foreground
-  background = "#1c1c1c",
-  foreground = "#e4e4e4",
+  background = "#1c1c1c", -- Grubber black
+  foreground = "#e4e4e4", -- Grubber white
 
   -- ANSI colors
   ansi = {
@@ -27,7 +28,7 @@ config.colors = {
     "#87d75f", -- green
     "#ffd700", -- yellow
     "#87afd7", -- blue
-    "#af875f", -- magenta / brown
+    "#af875f", -- magenta/brown
     "#afd7af", -- cyan
     "#e4e4e4", -- white
   },
