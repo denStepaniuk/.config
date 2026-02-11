@@ -1,4 +1,5 @@
-" Grubber colorscheme for Neovim 0.12+
+" Grubber colorscheme for Neovim 0.11+
+highlight clear
 
 if exists("syntax_on")
     syntax reset
@@ -15,10 +16,14 @@ let s:blue   = ["#87afd7", "110"]
 let s:brown  = ["#af875f", "137"]
 let s:cyan   = ["#afd7af", "151"]
 let s:gray   = ["#262626", "235"]
+let s:purple = ["#af87ff", "141"]
 let s:green  = ["#87d75f", "113"]
 let s:red    = ["#ff5f5f", "203"]
-let s:white  = ["#e4e4e4", "254"]
-let s:yellow = ["#ffd700", "220"]
+let s:white  = ["#cccccc", "252"]
+let s:yellow  = ["#ffd700", "220"]
+let s:pale_sand = ["#d7d7af", "220"]
+let s:dim_yellow = ["#afaf87", "144"]
+let s:dimgray = ["#7a7a7a", "245"]
 
 let s:bold      = "bold"
 let s:italic    = "italic"
@@ -61,16 +66,27 @@ endfunction
 " ========================
 " Highlights
 " ========================
+" html tags 
+call s:hl("htmlTag",        { "fg": s:red })
+call s:hl("htmlEndTag",     {"fg": s:red })
+call s:hl("htmlTagName",    { "fg": s:blue })
+call s:hl("htmlSpecialTagName",  { "fg": s:blue })
+" ========================
+" Python
+call s:hl("pythonOperator", { "fg": s:yellow})
+"=========================
 call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })
 call s:hl("CursorLine",     { "bg": s:gray })
+call s:hl("CursorLineNr",   { "fg": s:yellow })
+call s:hl("LineNr",         { "fg": s:dimgray })
 call s:hl("DiffAdd",        { "fg": s:green })
 call s:hl("DiffChange",     { "fg": s:blue })
 call s:hl("DiffDelete",     { "fg": s:red })
 call s:hl("DiffText",       { "fg": s:blue, "style": s:underline })
 call s:hl("Directory",      { "fg": s:blue })
-call s:hl("EndOfBuffer",    { "fg": s:black })
+call s:hl("EndOfBuffer",    { "fg": s:white })  " use default to show ~ tildes
 call s:hl("Error",          { "fg": s:red })
 call s:hl("ErrorMsg",       { "fg": s:red })
 call s:hl("FoldColumn",     { "fg": s:brown, "bg": s:gray })
@@ -96,13 +112,13 @@ call s:hl("SpellBad",       { "fg": s:red, "style": s:underline })
 call s:hl("SpellCap",       { "fg": s:blue, "style": s:underline })
 call s:hl("SpellLocal",     { "fg": s:yellow, "style": s:underline })
 call s:hl("SpellRare",      { "style": s:underline })
-call s:hl("Statement",      { "fg": s:yellow, "style": s:bold })
+call s:hl("Statement",      { "fg": s:yellow }) " responsible for keywords
 call s:hl("StatusLine",     { "fg": s:white, "bg": s:gray, "style": s:bold })
 call s:hl("StatusLineNC",   { "fg": s:white, "bg": s:gray })
 call s:hl("String",         { "fg": s:green })
 call s:hl("Title",          { "fg": s:white })
 call s:hl("Todo",           { "fg": s:brown, "style": s:italic })
-call s:hl("Type",           { "fg": s:yellow, "style": s:bold })
+call s:hl("Type",           { "fg": s:white })
 call s:hl("Underlined",     { "style": s:underline })
 call s:hl("VertSplit",      { "fg": s:gray })
 call s:hl("WarningMsg",     { "fg": s:yellow })
@@ -110,4 +126,12 @@ call s:hl("WildMenu",       { "fg": s:black, "bg": s:yellow, "style": s:bold })
 call s:hl("diffAdded",      { "fg": s:green })
 call s:hl("diffRemoved",    { "fg": s:red })
 call s:hl("diffSubname",    { "fg": s:blue })
+" Floating windows
+call s:hl("NormalFloat", { "fg": s:white, "bg": s:black })
+call s:hl("FloatBorder", { "fg": s:yellow,  "bg": s:black })
+call s:hl("FloatTitle",  { "fg": s:yellow, "bg": s:black, "style": s:bold })
+call s:hl("jsonKeyword", { "fg": s:white })
+" --- TreeSitter Highlights ---
+"" This covers 'manager' and other local variables
+call s:hl("@variable",           { "fg": s:white })
 
