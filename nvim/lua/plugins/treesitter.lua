@@ -13,8 +13,7 @@ return {
         "typescript",
         "yaml",
         "dockerfile",
-        "htmldjango",
-        "java"
+        "htmldjango"
       },
     },
   }
