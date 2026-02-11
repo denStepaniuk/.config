@@ -64,7 +64,8 @@ endfunction
 call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })
-call s:hl("CursorLine",     { "bg": s:gray })
+call s:hl("CursorLine",     {}) " disabled styles
+call s:hl("CursorLineNr",   { "fg": s:yellow })
 call s:hl("DiffAdd",        { "fg": s:green })
 call s:hl("DiffChange",     { "fg": s:blue })
 call s:hl("DiffDelete",     { "fg": s:red })
@@ -96,13 +97,15 @@ call s:hl("SpellBad",       { "fg": s:red, "style": s:underline })
 call s:hl("SpellCap",       { "fg": s:blue, "style": s:underline })
 call s:hl("SpellLocal",     { "fg": s:yellow, "style": s:underline })
 call s:hl("SpellRare",      { "style": s:underline })
-call s:hl("Statement",      { "fg": s:yellow, "style": s:bold })
+call s:hl("Statement",      { "fg": s:yellow }) " responsible for keywords
 call s:hl("StatusLine",     { "fg": s:white, "bg": s:gray, "style": s:bold })
 call s:hl("StatusLineNC",   { "fg": s:white, "bg": s:gray })
 call s:hl("String",         { "fg": s:green })
 call s:hl("Title",          { "fg": s:white })
 call s:hl("Todo",           { "fg": s:brown, "style": s:italic })
-call s:hl("Type",           { "fg": s:yellow, "style": s:bold })
+"call s:hl("Type",           { "fg": s:yellow, "style": s:italic }) "
+"commented as an example
+call s:hl("Type",           { "fg": s:white })
 call s:hl("Underlined",     { "style": s:underline })
 call s:hl("VertSplit",      { "fg": s:gray })
 call s:hl("WarningMsg",     { "fg": s:yellow })
