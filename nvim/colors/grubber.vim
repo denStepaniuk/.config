@@ -113,4 +113,7 @@ call s:hl("WildMenu",       { "fg": s:black, "bg": s:yellow, "style": s:bold })
 call s:hl("diffAdded",      { "fg": s:green })
 call s:hl("diffRemoved",    { "fg": s:red })
 call s:hl("diffSubname",    { "fg": s:blue })
-
+" Floating windows
+call s:hl("NormalFloat", { "fg": s:white, "bg": s:black })
+call s:hl("FloatBorder", { "fg": s:yellow,  "bg": s:black })
+call s:hl("FloatTitle",  { "fg": s:yellow, "bg": s:black, "style": s:bold })
