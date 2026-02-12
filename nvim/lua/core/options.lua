@@ -2,6 +2,10 @@ vim.cmd("let g:netrw_liststyle = 3")
 vim.cmd("set fillchars=eob:\\ ") -- allow to hide tilda '~' symbols
 vim.cmd("colorscheme grubber")
 
+vim.api.nvim_create_user_command("Config", function()
+  vim.cmd("edit" .. vim.fn.stdpath("config"))
+end, {})
+
 local opt = vim.opt -- for conciseness
 
 opt.winborder = "rounded"
