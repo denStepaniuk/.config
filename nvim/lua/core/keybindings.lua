@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- General Keymaps -------------------
-keymap.set("n", "<leader>ww", "<cmd>wa<CR>", { desc = "Save All" })
+-- keymap.set("n", "<leader>ww", "<cmd>wa<CR>", { desc = "Save All" })
 -- use jk to exit insert mode
 -- keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 

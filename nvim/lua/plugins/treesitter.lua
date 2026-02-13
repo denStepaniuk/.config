@@ -8,6 +8,8 @@ return {
         "vimdoc",
         "html",
         "css",
+        "javascript",
+        "typescript"
       },
     },
   }

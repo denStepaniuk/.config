@@ -1,11 +1,3 @@
-vim.cmd("let g:netrw_liststyle = 3")
-vim.cmd("set fillchars=eob:\\ ") -- allow to hide tilda '~' symbols
-vim.cmd("colorscheme grubber")
-
-vim.api.nvim_create_user_command("Config", function()
-  vim.cmd("edit" .. vim.fn.stdpath("config"))
-end, {})
-
 local opt = vim.opt -- for conciseness
 
 opt.winborder = "rounded"
@@ -28,11 +20,11 @@ opt.wrap = false -- disable line wrapping
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
--- cursor line
-opt.cursorline = true-- highlight the current cursor line
-
--- appearance
-
+-- cursor line highlight, I need to keep it off for editor
+-- but floating windows have to have it (resolved by grubber colorscheme)
+-- also there is a function call in 'commands'
+opt.cursorline = true
+opt.cursorlineopt = "number"
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
