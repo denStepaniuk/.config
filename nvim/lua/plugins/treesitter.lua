@@ -9,7 +9,8 @@ return {
         "html",
         "css",
         "javascript",
-        "typescript"
+        "typescript",
+        "yaml"
       },
     },
   }
