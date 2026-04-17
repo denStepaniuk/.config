@@ -57,6 +57,7 @@ return {
       })
 
       vim.keymap.set('n', '<leader>fd', vim.diagnostic.open_float, { desc = "Open float diagnostic" })
+      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Code actions" })
       vim.keymap.set("n", "[d", function()
         vim.diagnostic.jump({
           count = -1,
