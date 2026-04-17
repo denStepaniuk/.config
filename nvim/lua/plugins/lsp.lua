@@ -43,7 +43,7 @@ return {
       })
 
       vim.lsp.config('djlsp', {
-        capabilities = capabilities
+        capabilities = capabilities,
       })
 
       vim.lsp.config('html', {
