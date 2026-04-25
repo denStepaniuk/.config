@@ -4,9 +4,12 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- General Keymaps -------------------
-keymap.set("n", "<leader>ww", "<cmd>wa<CR>", { desc = "Save All" })
+-- keymap.set("n", "<leader>ww", "<cmd>wa<CR>", { desc = "Save All" })
 -- use jk to exit insert mode
 -- keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+
+-- leave some space for large files in editor
+keymap.set("n", "G", "Gzz")
 
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -25,11 +28,11 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- 
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- tabs management
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+-- keymap.set("n", "<leader>tt", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+-- keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+-- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+-- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+-- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- Navigate splits in NORMAL mode
 keymap.set("n", "<C-h>", "<C-w>h")
@@ -42,3 +45,13 @@ keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]])
 keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]])
 keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]])
 keymap.set("t", "<C-l>", [[<C-\><C-n><C-w>l]])
+
+-- Open terminal window:
+-- Open terminal in right vertical split with <leader>ot
+keymap.set("n", "<leader>to", function()
+  -- Create a vertical split and open terminal
+  vim.cmd("vsplit")
+  vim.cmd("wincmd l")      -- move to the right split
+  vim.cmd("terminal")      -- open terminal
+  vim.cmd("startinsert")   -- enter insert mode
+end, { noremap = true, silent = true })

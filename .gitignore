@@ -2,9 +2,10 @@
 gh/*
 .gh/
 
-# lazygit
+# lazy
 .lazygit/
 lazygit/
+lazydocker/
 
 # zed 
 zed/prompts
@@ -12,4 +13,6 @@ zed/prompts
 # other
 cagent/
 iterm2/
-
+.vs_code/
+vs_code/
+.idea/

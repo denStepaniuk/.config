@@ -1,0 +1,93 @@
+return {
+  -- { "L3MON4D3/LuaSnip", keys = {} },
+  -- {
+  --   "saghen/blink.cmp",
+  --   dependencies = {
+  --     "rafamadriz/friendly-snippets",
+  --   },
+  --   version = "*",
+  --   config = function()
+  --     require("blink.cmp").setup({
+  --       snippets = { preset = "luasnip" },
+  --       signature = { enabled = true },
+  --       keymap = {
+  --         preset = 'default',
+  --         ['<C-k>'] = { 'select_prev', 'fallback' },
+  --         ['<C-j>'] = { 'select_next', 'fallback' },
+  --         ['<C-e>'] = { 'hide', 'fallback' },
+  --         ['<Tab>'] = { 'accept', 'fallback' },
+  --       },
+  --       appearance = {
+  --         use_nvim_cmp_as_default = false,
+  --         nerd_font_variant = "normal",
+  --       },
+  --       sources = {
+  --         default = { "lsp", "path", "snippets", "buffer" },
+  --         providers = {
+  --           cmdline = {
+  --             min_keyword_length = 2,
+  --           },
+  --         },
+  --       },
+  --       cmdline = {
+  --         enabled = true,
+  --         completion = { menu = { auto_show = true } },
+  --         keymap = {
+  --           ['<C-k>'] = { 'select_prev', 'fallback' },
+  --           ['<C-j>'] = { 'select_next', 'fallback' },
+  --           ['<Tab>'] = { "accept_and_enter", "fallback" },
+  --         },
+  --       },
+  --       completion = {
+  --         menu = {
+  --           border = nil,
+  --           scrolloff = 1,
+  --           scrollbar = false,
+  --           draw = {
+  --             columns = {
+  --               { "kind_icon" },
+  --               { "label",      "label_description", gap = 1 },
+  --             },
+  --           },
+  --         },
+  --         documentation = {
+  --           window = {
+  --             border = nil,
+  --             scrollbar = false,
+  --           },
+  --           auto_show = false,
+  --           auto_show_delay_ms = 500,
+  --         },
+  --       },
+  --     })
+  --
+  --     require("luasnip.loaders.from_vscode").lazy_load()
+  --   end,
+  -- },
+  --
+  'saghen/blink.cmp',
+  dependencies = { 'rafamadriz/friendly-snippets' },
+  version = '1.*',
+  opts = {
+    signature = { enabled = true },
+    keymap = {
+      preset = 'default',
+      ['<C-k>'] = { 'select_prev', 'fallback' },
+      ['<C-j>'] = { 'select_next', 'fallback' },
+      ['<C-e>'] = { 'hide', 'fallback' },
+      ['<Tab>'] = { 'accept', 'fallback' },
+    },
+
+    appearance = {
+      nerd_font_variant = 'mono'
+    },
+
+    completion = { documentation = { auto_show = false } },
+    sources = {
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
+
+    fuzzy = { implementation = "prefer_rust_with_warning" }
+  },
+  opts_extend = { "sources.default" }
+}
