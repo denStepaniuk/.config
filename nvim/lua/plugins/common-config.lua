@@ -22,7 +22,7 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
+  { "folke/trouble.nvim", enabled = true },
 
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
