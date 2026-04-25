@@ -1,81 +1,50 @@
 return {
   {
-    'neovim/nvim-lspconfig',
-    dependencies = { 'saghen/blink.cmp' },
-    config = function()
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-
-      vim.lsp.config('basedpyright', {
-        capabilities = capabilities,
-        settings = {
-          basedpyright = {
-            analysis = {
-              typeCheckingMode = "standard",
-              autoImportCompletions = true,
-              useLibraryCodeForTypes = true,
+    "neovim/nvim-lspconfig",
+    dependencies = { "saghen/blink.cmp" },
+    opts = {
+      servers = {
+        pyright = { enabled = false },
+        basedpyright = {
+          enabled = true,
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = "standard",
+                autoImportCompletions = true,
+                useLibraryCodeForTypes = true,
+              },
             },
           },
         },
-      })
-
-      vim.lsp.config('vtsls', {
-        capabilities = capabilities,
-        settings = {
-          typescript = {
-            inlayHints = {
-              parameterNames = { enabled = "all" },
-              parameterTypes = { enabled = true },
-              variableTypes = { enabled = true },
-              propertyDeclarationTypes = { enabled = true },
-              functionLikeReturnTypes = { enabled = true },
-              enumMemberValues = { enabled = true },
+        vtsls = {
+          settings = {
+            typescript = {
+              inlayHints = {
+                parameterNames = { enabled = "all" },
+                parameterTypes = { enabled = true },
+                variableTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                enumMemberValues = { enabled = true },
+              },
             },
           },
         },
-      })
-
-      vim.lsp.config('typos_lsp', {
-        capabilities = capabilities,
-      })
-
-      vim.lsp.config('eslint', {
-        capabilities = capabilities,
-      })
-
-      vim.lsp.config('djlsp', {
-        capabilities = capabilities,
-      })
-
-      vim.lsp.config('html', {
-        capabilities = capabilities,
-        filetypes = { 'html', 'htmldjango' }
-      })
-
-      vim.lsp.config('cssls', {
-        capabilities = capabilities,
-        filetypes = { 'css' }
-      })
-
-      vim.keymap.set('n', '<leader>fd', vim.diagnostic.open_float, { desc = "Open float diagnostic" })
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Code actions" })
-      vim.keymap.set("n", "[d", function()
-        vim.diagnostic.jump({
-          count = -1,
-          float = true,
-          wrap = true,
-        })
-      end, {})
-      vim.keymap.set("n", "]d", function()
-        vim.diagnostic.jump({
-          count = 1,
-          float = true,
-          wrap = true,
-        })
-      end, {})
-    end
+        typos_lsp = {},
+        eslint = {},
+        djlsp = {},
+        html = {
+          filetypes = { "html", "htmldjango" },
+        },
+        cssls = {
+          filetypes = { "css" },
+        },
+      },
+    },
   },
   {
-    'williamboman/mason-lspconfig.nvim',
+    "mason-org/mason-lspconfig.nvim",
     lazy = false,
     opts = {
       ensure_installed = {
@@ -89,8 +58,8 @@ return {
         "yamlls",
         "html",
         "cssls",
-        "typos_lsp"
+        "typos_lsp",
       },
-    }
+    },
   },
 }
