@@ -5,7 +5,6 @@ return {
       colorscheme = "grubber",
     },
   },
-
   {
     "grubber",
     dir = "~/.config/nvim/", -- Points to where /colors/grubber.vim lives
