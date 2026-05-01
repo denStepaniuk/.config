@@ -8,6 +8,9 @@ return {
       ["<C-e>"] = { "hide", "fallback" },
       ["<Tab>"] = { "accept", "fallback" },
     },
-    completion = { documentation = { auto_show = false } },
+    completion = {
+      ghost_text = { enabled = true },
+      documentation = { auto_show = false },
+    },
   },
 }

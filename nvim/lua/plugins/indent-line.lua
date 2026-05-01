@@ -5,18 +5,14 @@ return {
   ---@type ibl.config
   opts = {},
   config = function()
-    local hl_color = "#3a3a3a"
-
-    vim.api.nvim_set_hl(0, "IblIndent", { fg = hl_color, nocombine = true })
-    vim.api.nvim_set_hl(0, "IblIndentScope", { fg = hl_color, nocombine = true })
-
     require("ibl").setup({
       indent = {
-        char = "│",
-        highlight = { "IblIndent" },
+        char = "",
       },
       scope = {
-        enabled = false, -- disable extra scope lines
+        show_start = false, -- Optional: avoids a horizontal line at the start
+        show_end = false,
+        enabled = false, -- Disable extra scope lines
       },
       exclude = {
         filetypes = { "help", "dashboard", "alpha", "NvimTree", "lazy", "mason" },
