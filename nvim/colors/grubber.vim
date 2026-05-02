@@ -77,8 +77,8 @@ call s:hl("LspInlayHint", { "fg": s:dimgray })
 " Python
 call s:hl("pythonOperator", { "fg": s:yellow})
 "=========BlinkCmp========
-call s:hl("BlinkCmpGhostText",  { "fg": s:brown })
-"=========================
+call s:hl("BlinkCmpGhostText",  { "fg": s:cyan })
+"=======GeneralGroups=====
 call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })

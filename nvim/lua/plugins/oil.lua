@@ -17,6 +17,6 @@ return {
   lazy = false,
   config = function(_, opts)
     require("oil").setup(opts)
-    vim.keymap.set("n", "<leader>oo", "<cmd>:Oil<CR>", { desc = "Open Oil explorer" })
+    vim.keymap.set("n", "<leader>o", "<cmd>:Oil<CR>", { desc = "Open Oil explorer" })
   end,
 }

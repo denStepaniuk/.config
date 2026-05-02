@@ -10,14 +10,15 @@ return {
         char = "",
       },
       scope = {
-        show_start = false, -- Optional: avoids a horizontal line at the start
+        show_start = false,
         show_end = false,
-        enabled = false, -- Disable extra scope lines
+        enabled = false,
       },
       exclude = {
         filetypes = { "help", "dashboard", "alpha", "NvimTree", "lazy", "mason" },
         buftypes = { "terminal", "nofile" },
       },
     })
+    vim.keymap.set("n", "<leader>n", "<cmd>Noice history<Cr>")
   end,
 }
