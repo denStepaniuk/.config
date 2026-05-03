@@ -23,7 +23,7 @@ let s:yellow  = ["#ffd700", "220"]
 let s:pale_sand = ["#d7d7af", "220"]
 let s:dim_yellow = ["#afaf87", "144"]
 let s:dimgray = ["#7a7a7a", "245"]
-
+let s:orange = ["#ffcc80", "144"]
 let s:bold      = "bold"
 let s:italic    = "italic"
 let s:underline = "underline"
@@ -75,7 +75,12 @@ call s:hl("htmlSpecialTagName",  { "fg": s:blue })
 " This controls the text and the background of the hints
 call s:hl("LspInlayHint", { "fg": s:dimgray })
 " Python
+" call s:hl("@number.python", { "fg": s:white, "style": s:bold . ',' . s:italic })
+call s:hl("@number.python", { "fg": s:orange })
+call s:hl("@keyword.type.python", { "fg": s:dimgray })
+call s:hl("@lsp.typemod.selfParameter.parameter.python", { "fg": s:cyan })
 call s:hl("pythonOperator", { "fg": s:yellow})
+call s:hl("@keyword.function.python", { "fg": s:dimgray })
 "=========BlinkCmp========
 call s:hl("BlinkCmpGhostText",  { "fg": s:cyan })
 "=======GeneralGroups=====
