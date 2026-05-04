@@ -4,3 +4,4 @@ cursor-text=000000
 theme=gruber
 window-decoration = false
 font-family = Lilex
+adjust-cell-height = 20%
