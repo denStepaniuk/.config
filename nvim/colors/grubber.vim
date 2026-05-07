@@ -16,7 +16,7 @@ let s:brown  = ["#af875f", "137"]
 let s:cyan   = ["#afd7af", "151"]
 let s:gray   = ["#262626", "235"]
 let s:purple = ["#af87ff", "141"]
-let s:green  = ["#87d75f", "113"]
+let s:green  = ["#9cab70", "113"]
 let s:red    = ["#ff5f5f", "203"]
 let s:white  = ["#cccccc", "252"]
 let s:yellow  = ["#ffd700", "220"]
@@ -84,6 +84,9 @@ call s:hl("@keyword.function.python", { "fg": s:dimgray })
 "=========BlinkCmp========
 call s:hl("BlinkCmpGhostText",  { "fg": s:cyan })
 "=======GeneralGroups=====
+"======NoiceBorderCmd=====
+call s:hl("NoiceCmdlinePopupBorder", { "fg": s:white })
+"========================="
 call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })

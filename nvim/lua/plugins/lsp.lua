@@ -9,11 +9,10 @@ return {
         underline = true,
       },
       servers = {
-        pyright = { enabled = false },
-        basedpyright = {
+        pyright = {
           enabled = true,
           settings = {
-            basedpyright = {
+            pyright = {
               analysis = {
                 typeCheckingMode = "standard",
                 autoImportCompletions = true,
@@ -37,7 +36,6 @@ return {
           },
         },
         typos_lsp = {},
-        eslint = {},
         djlsp = {},
         html = {
           filetypes = { "html", "htmldjango" },
@@ -53,11 +51,10 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
-        "basedpyright",
+        "pyright",
         "ruff",
         "lua_ls",
         "vtsls",
-        "eslint",
         "jsonls",
         "dockerls",
         "yamlls",
