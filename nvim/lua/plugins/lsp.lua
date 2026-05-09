@@ -9,8 +9,27 @@ return {
         underline = true,
       },
       servers = {
-        pyright = {
+        zubanls = {
           enabled = true,
+          name = "ZubanLS",
+          cmd = { "zuban", "server" },
+          filetypes = { "python" },
+          root_dir = require("lspconfig.util").root_pattern("pyproject.toml", "setup.py", "setup.cfg", ".git"),
+        },
+        basedpyright = {
+          enabled = false,
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = "standard",
+                autoImportCompletions = true,
+                useLibraryCodeForTypes = true,
+              },
+            },
+          },
+        },
+        pyright = {
+          enabled = false,
           settings = {
             pyright = {
               analysis = {
@@ -38,7 +57,7 @@ return {
         typos_lsp = {},
         djlsp = {},
         html = {
-          filetypes = { "html", "htmldjango" },
+          filetypes = { "html" },
         },
         cssls = {
           filetypes = { "css" },

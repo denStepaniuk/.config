@@ -73,9 +73,10 @@ call s:hl("htmlSpecialTagName",  { "fg": s:blue })
 " ========================
 " --- LSP Inlay Hints ---
 " This controls the text and the background of the hints
+call s:hl("@keyword.import.python", { "fg": s:cyan })
 call s:hl("LspInlayHint", { "fg": s:dimgray })
 " Python
-" call s:hl("@number.python", { "fg": s:white, "style": s:bold . ',' . s:italic })
+" call s:hl("@number.python", { "fg": s:white, "style": s:bold . ',' . s:italic }) -- example how to concatenate styles
 call s:hl("@number.python", { "fg": s:orange })
 call s:hl("@keyword.type.python", { "fg": s:dimgray })
 call s:hl("@lsp.typemod.selfParameter.parameter.python", { "fg": s:cyan })
@@ -83,10 +84,10 @@ call s:hl("pythonOperator", { "fg": s:yellow})
 call s:hl("@keyword.function.python", { "fg": s:dimgray })
 "=========BlinkCmp========
 call s:hl("BlinkCmpGhostText",  { "fg": s:cyan })
-"=======GeneralGroups=====
 "======NoiceBorderCmd=====
 call s:hl("NoiceCmdlinePopupBorder", { "fg": s:white })
 "========================="
+"=======GeneralGroups=====
 call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })

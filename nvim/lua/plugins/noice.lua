@@ -19,7 +19,7 @@ return {
     presets = {
       lsp_doc_border = true,
       -- bottom_search = false,
-      command_palette = false,
+      -- command_palette = false,
       -- long_message_to_split = false,
       -- inc_rename = false,
     },
