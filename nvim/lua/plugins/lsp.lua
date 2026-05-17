@@ -4,7 +4,6 @@ return {
     dependencies = {
       "saghen/blink.cmp",
     },
-
     opts = {
       inlay_hints = { enabled = false },
       diagnostics = {
@@ -12,28 +11,14 @@ return {
         underline = true,
       },
       servers = {
+        pyrefly = {
+          enabled = true,
+        },
         pyright = {
           enabled = false,
         },
-        -- FAST completions / navigation
-        zubanls = {
-          enabled = true,
-          cmd = { "zuban", "server" },
-          filetypes = { "python" },
-          root_dir = require("lspconfig.util").root_pattern(
-            "pyproject.toml",
-            "setup.py",
-            "setup.cfg",
-            "requirements.txt",
-            ".git"
-          ),
-          -- Important when combining with basedpyright
-          "basedpyright",
-          single_file_support = true,
-        },
-        -- MAIN TYPECHECKER
         basedpyright = {
-          enabled = true,
+          enabled = false,
           settings = {
             basedpyright = {
               analysis = {
@@ -42,9 +27,9 @@ return {
                 useLibraryCodeForTypes = true,
                 diagnosticMode = "workspace",
                 autoSearchPaths = true,
-                -- useful for django
                 extraPaths = {
                   "./",
+                  "./src",
                 },
               },
             },
@@ -77,12 +62,10 @@ return {
             },
           },
         },
-
         typos_lsp = {},
-        -- Django templates
         djlsp = {},
         html = {
-          filetypes = { "html" },
+          filetypes = { "html", "htmldjango" },
         },
         cssls = {
           filetypes = { "css" },
@@ -100,8 +83,7 @@ return {
     opts = {
       ensure_installed = {
         -- Python
-        "zuban",
-        "basedpyright",
+        -- "basedpyright",
         "ruff",
         -- Web
         "vtsls",

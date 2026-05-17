@@ -19,6 +19,5 @@ return {
         buftypes = { "terminal", "nofile" },
       },
     })
-    vim.keymap.set("n", "<leader>n", "<cmd>Noice history<Cr>")
   end,
 }

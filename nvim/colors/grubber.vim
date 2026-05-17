@@ -82,7 +82,7 @@ call s:hl("@keyword.type.python", { "fg": s:dimgray })
 call s:hl("@lsp.typemod.selfParameter.parameter.python", { "fg": s:cyan })
 call s:hl("pythonOperator", { "fg": s:yellow})
 call s:hl("@keyword.function.python", { "fg": s:dimgray })
-"=========BlinkCmp========
+"======== BlinkCmp ========
 call s:hl("BlinkCmpGhostText",  { "fg": s:cyan })
 "======NoiceBorderCmd=====
 call s:hl("NoiceCmdlinePopupBorder", { "fg": s:white })

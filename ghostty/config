@@ -3,5 +3,5 @@ cursor-color=ffdd33
 cursor-text=000000
 theme=gruber
 window-decoration = false
-font-family = JetBrains Mono
-adjust-cell-height = 20%
+font-family = JetBrainsMono Nerd Font
+adjust-cell-height = 10%
