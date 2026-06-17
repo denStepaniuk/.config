@@ -14,27 +14,6 @@ return {
         pyrefly = {
           enabled = true,
         },
-        pyright = {
-          enabled = false,
-        },
-        basedpyright = {
-          enabled = false,
-          settings = {
-            basedpyright = {
-              analysis = {
-                typeCheckingMode = "standard",
-                autoImportCompletions = true,
-                useLibraryCodeForTypes = true,
-                diagnosticMode = "workspace",
-                autoSearchPaths = true,
-                extraPaths = {
-                  "./",
-                  "./src",
-                },
-              },
-            },
-          },
-        },
         ruff = {
           enabled = true,
           init_options = {
@@ -83,7 +62,7 @@ return {
     opts = {
       ensure_installed = {
         -- Python
-        -- "basedpyright",
+        "pyrefly",
         "ruff",
         -- Web
         "vtsls",

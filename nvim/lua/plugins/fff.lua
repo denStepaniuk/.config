@@ -7,11 +7,18 @@ return {
   end,
   opts = {
     debug = {
-      enabled = true,
+      enabled = false,
       show_scores = true,
     },
+    lazy = false, -- the plugin lazy-initialises itself
+    layout = {
+      prompt_position = "top",
+    },
+    keymaps = {
+      move_up = { "<Up>", "<C-k>" },
+      move_down = { "<Down>", "<C-j>" },
+    },
   },
-  lazy = false, -- the plugin lazy-initialises itself
   keys = {
     {
       "ff",

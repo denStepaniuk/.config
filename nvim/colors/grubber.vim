@@ -1,3 +1,4 @@
+"TODO: recreate in .lua format
 highlight clear
 
 if exists("syntax_on")
@@ -65,7 +66,10 @@ endfunction
 " ========================
 " Highlights
 " ========================
-" html tags 
+" Debugger
+call s:hl("DapBreakpoint",  { "fg": s:red })
+call s:hl("DapStopped",     { "fg": s:orange, "bg": s:gray })
+" html tags
 call s:hl("htmlTag",        { "fg": s:red })
 call s:hl("htmlEndTag",     {"fg": s:red })
 call s:hl("htmlTagName",    { "fg": s:blue })
