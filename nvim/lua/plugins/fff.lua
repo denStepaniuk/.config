@@ -1,52 +1,18 @@
-return {
-  enabled = true,
-  "dmtrKovalenko/fff.nvim",
-  build = function()
-    -- downloads a prebuilt binary or falls back to cargo build
-    require("fff.download").download_or_build_binary()
-  end,
-  opts = {
-    debug = {
-      enabled = false,
-      show_scores = true,
-    },
-    lazy = false, -- the plugin lazy-initialises itself
-    layout = {
-      prompt_position = "top",
-    },
-    keymaps = {
-      move_up = { "<Up>", "<C-k>" },
-      move_down = { "<Down>", "<C-j>" },
-    },
-  },
-  keys = {
-    {
-      "ff",
-      function()
-        require("fff").find_files()
-      end,
-      desc = "FFFind files",
-    },
-    {
-      "fg",
-      function()
-        require("fff").live_grep()
-      end,
-      desc = "LiFFFe grep",
-    },
-    {
-      "fz",
-      function()
-        require("fff").live_grep({ grep = { modes = { "fuzzy", "plain" } } })
-      end,
-      desc = "Live fffuzy grep",
-    },
-    {
-      "fc",
-      function()
-        require("fff").live_grep({ query = vim.fn.expand("<cword>") })
-      end,
-      desc = "Search current word",
-    },
-  },
+vim.g.fff = {
+  lazy_sync = true,
+  debug = { enabled = false, show_scores = true },
 }
+
+require('fff').setup({
+  title = 'Seeker',
+  layout = {
+    prompt_position = "top",
+  },
+  keymaps = {
+    move_up = { '<C-k>' },
+    move_down = { '<C-j>' },
+  }
+})
+
+vim.keymap.set('n', 'ff', function() require('fff').find_files() end, { desc = 'FFFind files' })
+vim.keymap.set('n', 'fg', function() require('fff').live_grep() end, { desc = 'Grep files' })

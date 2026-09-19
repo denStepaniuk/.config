@@ -1,9 +1,5 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
--- keymap.set("n", "<leader>ww", "<cmd>wa<CR>", { desc = "Save All" })
--- use jk to exit insert mode
--- keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+-- set leader key to space
+vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
@@ -11,7 +7,7 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("n", "G", "Gzz")
 
 -- clear search highlights
--- keymap.set("n", "<ESC>", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<ESC>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
