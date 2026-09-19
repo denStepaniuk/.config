@@ -2,7 +2,6 @@ return {
   {
     "mfussenegger/nvim-dap",
     config = function()
-      local dap = require("dap")
       local widgets = require("dap.ui.widgets")
 
       -- Keymaps to trigger default widgets

@@ -3,18 +3,30 @@ return {
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {
+    columns = {
+      "icon",
+    },
+    win_options = {
+      signcolumn = "yes",
+    },
     default_file_explorer = true,
     view_options = {
       show_hidden = true,
       is_ignored_by_git = false,
     },
+    watch_for_changes = true,
+    skip_confirm_for_simple_edits = true,
+    lsp_file_methods = {
+      enabled = true,
+    },
+    keymaps = {
+      ["<C-r>"] = "actions.refresh",
+      ["<C-l>"] = false,
+      ["<C-h>"] = false,
+    },
   },
-
-  -- Optional dependencies
-  -- dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-  dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
   lazy = false,
+
   config = function(_, opts)
     require("oil").setup(opts)
     vim.keymap.set("n", "<leader>o", "<cmd>:Oil<CR>", { desc = "Open Oil explorer" })

@@ -11,8 +11,17 @@ return {
         underline = true,
       },
       servers = {
-        pyrefly = {
-          enabled = true,
+        zuban = {},
+        basedpyright = {
+          enabled = false,
+          settings = {
+            basedpyright = {
+              analysis = {
+                autoImportCompletions = true, -- Enables auto-import for 'random', 'os', etc.
+                typeCheckingMode = "standard",
+              },
+            },
+          },
         },
         ruff = {
           enabled = true,
@@ -23,7 +32,7 @@ return {
             },
           },
           on_attach = function(client)
-            -- avoid hover conflicts with pyright
+            -- avoid hover conflicts with any py lsps
             client.server_capabilities.hoverProvider = false
           end,
         },
@@ -42,7 +51,6 @@ return {
           },
         },
         typos_lsp = {},
-        djlsp = {},
         html = {
           filetypes = { "html", "htmldjango" },
         },
@@ -62,7 +70,6 @@ return {
     opts = {
       ensure_installed = {
         -- Python
-        "pyrefly",
         "ruff",
         -- Web
         "vtsls",

@@ -4,6 +4,6 @@ return {
   lazy = false,
   opts = {
     indent = { enabled = true, animate = { enabled = false } },
-    words = { enabled = false },
+    -- words = { enabled = false },
   },
 }
