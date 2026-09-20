@@ -32,14 +32,14 @@ opt.smartcase = true  -- if you include mixed case in your search, assumes you w
 -- but floating windows have to have it (resolved by grubber colorscheme)
 -- also there is a function call in 'commands'
 opt.cursorline = true
-opt.cursorlineopt = "number"
+opt.cursorlineopt = "both"
 
 -- turn on termguicolors for dark colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
-
+opt.showmode = false -- disable showing mode below statusline
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
@@ -57,4 +57,4 @@ opt.scrolloff = 8
 opt.updatetime = 50
 
 opt.hlsearch = true
-opt.colorcolumn = "120"
+-- opt.colorcolumn = "120" -- disabled, no line need on right side
