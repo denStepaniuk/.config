@@ -1,4 +1,3 @@
-vim.o.cmdheight = 0
 vim.diagnostic.config({
 	underline = true,
 	virtual_text = false,

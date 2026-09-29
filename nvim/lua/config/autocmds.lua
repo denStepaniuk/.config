@@ -14,4 +14,10 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
   end,
 })
-
+-- remove completion from fff.nvim
+vim.api.nvim_create_autocmd({"FileType", "BufEnter"}, {
+  pattern = { "fff", "fff_input", "fff-input" },
+  callback = function()
+    vim.b.minicompletion_disable = true
+  end,
+})

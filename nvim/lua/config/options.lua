@@ -56,5 +56,8 @@ opt.swapfile = false
 opt.scrolloff = 8
 opt.updatetime = 50
 
+-- somehow requires by 'tiny-cmd-line'
+opt.cmdheight = 0
+
 opt.hlsearch = true
 -- opt.colorcolumn = "120" -- disabled, no line need on right side

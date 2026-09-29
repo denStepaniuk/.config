@@ -1,0 +1,23 @@
+require('nvim-treesitter').setup({})
+require'nvim-treesitter'.install {
+  "python",
+  "bash",
+	"css",
+	"diff",
+	"html",
+	"javascript",
+	"jsdoc",
+	"json",
+	"json5",
+	"lua",
+	"luadoc",
+	"luap",
+	"markdown",
+	"markdown_inline",
+	"query",
+	"tsx",
+	"typescript",
+	"vim",
+	"vimdoc",
+	"yaml",
+}
