@@ -12,17 +12,6 @@ return {
       },
       servers = {
         zuban = {},
-        basedpyright = {
-          enabled = false,
-          settings = {
-            basedpyright = {
-              analysis = {
-                autoImportCompletions = true, -- Enables auto-import for 'random', 'os', etc.
-                typeCheckingMode = "standard",
-              },
-            },
-          },
-        },
         ruff = {
           enabled = true,
           init_options = {
@@ -57,10 +46,11 @@ return {
         cssls = {
           filetypes = { "css" },
         },
-        jsonls = {},
-        yamlls = {},
-        dockerls = {},
+        -- jsonls = {},
+        -- yamlls = {},
+        -- dockerls = {},
         lua_ls = {},
+        ols = {},
       },
     },
   },
@@ -81,6 +71,7 @@ return {
         -- Other
         "lua_ls",
         "typos_lsp",
+        "ols",
       },
     },
   },
