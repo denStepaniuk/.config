@@ -25,3 +25,16 @@ vim.lsp.config['ruff'] = {
     }
   }
 }
+
+vim.lsp.config['ols'] = {
+  cmd = {'ols'},
+  filetypes = { 'odin' },
+  root_markers = {'ols.json', '.git'},
+  init_options = {
+		checker_args = "-strict-style",
+  }
+}
+
+vim.lsp.config['typos_lsp'] = {
+  root_markers = {'.git'}
+}

@@ -20,4 +20,5 @@ require'nvim-treesitter'.install {
 	"vim",
 	"vimdoc",
 	"yaml",
+  "odin"
 }
