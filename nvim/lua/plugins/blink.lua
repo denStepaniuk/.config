@@ -22,5 +22,8 @@ return {
       ghost_text = { enabled = false },
       documentation = { auto_show = false },
     },
+    signature = {
+      enabled = true,
+    },
   },
 }

@@ -3,7 +3,11 @@ local opt = vim.opt
 opt.expandtab = true
 opt.winborder = "rounded"
 opt.scrolloff = 8
-
+opt.listchars = {
+  tab = "  ", -- Replaces the '>' arrow on tab stops with spaces
+  trail = "·", -- Shows trailing spaces as dots (or '•', '␣')
+  nbsp = "␣", -- Non-breaking spaces
+}
 opt.winborder = "rounded"
 -- spell checker, not fit for programming purposes.
 -- substitude by typos_lsp
@@ -11,7 +15,6 @@ opt.winborder = "rounded"
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
-
 -- file format to make sure WSL and unix are not blended
 opt.fileformats = "unix,dos"
 
