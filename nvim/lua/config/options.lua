@@ -5,15 +5,9 @@
 local opt = vim.opt -- for conciseness
 
 opt.winborder = "rounded"
--- spell checker, not fit for programming purposes.
--- substitude by typos_lsp
--- opt.spell = true
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true         -- shows absolute line number on cursor line (when relative number is on)
-
--- file format to make sure WSL and unix are not blended
-opt.fileformats = "unix,dos"
 
 -- tabs & indentation
 opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
@@ -27,7 +21,7 @@ opt.wrap = false -- disable line wrapping
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
-
+opt.smartindent = true -- indenting correctly after {
 -- cursor line highlight, I need to keep it off for editor
 -- but floating windows have to have it (resolved by grubber colorscheme)
 -- also there is a function call in 'commands'
