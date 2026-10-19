@@ -11,7 +11,18 @@ return {
         underline = true,
       },
       servers = {
-        zuban = {},
+        basedpyright = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "openFilesOnly",
+            typeCheckingMode = "standard",
+            autoImportCompletions = true,
+            useLibraryCodeForTypes = true,
+          },
+        },
+        zuban = {
+          enabled = false,
+        },
         ruff = {
           enabled = true,
           init_options = {
