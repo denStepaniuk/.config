@@ -12,16 +12,17 @@ return {
       },
       servers = {
         basedpyright = {
+          enabled = false,
           analysis = {
             autoSearchPaths = true,
             diagnosticMode = "openFilesOnly",
-            typeCheckingMode = "standard",
+            typeCheckingMode = "off",
             autoImportCompletions = true,
             useLibraryCodeForTypes = true,
           },
         },
         zuban = {
-          enabled = false,
+          enabled = true,
         },
         ruff = {
           enabled = true,
@@ -37,6 +38,12 @@ return {
           end,
         },
         vtsls = {
+          filetypes = {
+            "typescript",
+            "javascript",
+            "javascriptreact",
+            "typescriptreact",
+          },
           settings = {
             typescript = {
               inlayHints = {
@@ -48,18 +55,27 @@ return {
                 enumMemberValues = { enabled = true },
               },
             },
+            javascript = {
+              suggest = {
+                completeFunctionCalls = true,
+              },
+            },
           },
         },
         typos_lsp = {},
         html = {
           filetypes = { "html", "htmldjango" },
+          init_options = {
+            provideFormatter = true,
+            embeddedSupport = {
+              css = true,
+              javascript = true, -- Enables JS intelligence inside HTML script tags
+            },
+          },
         },
         cssls = {
           filetypes = { "css" },
         },
-        -- jsonls = {},
-        -- yamlls = {},
-        -- dockerls = {},
         lua_ls = {},
         ols = {},
       },
