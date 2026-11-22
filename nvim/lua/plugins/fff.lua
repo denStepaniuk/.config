@@ -1,16 +1,14 @@
 return {
-  enabled = true,
-  "dmtrKovalenko/fff.nvim",
+  "dmtrKovalenko/fff",
   build = function()
-    -- downloads a prebuilt binary or falls back to cargo build
     require("fff.download").download_or_build_binary()
   end,
   opts = {
+    title = "Seeker",
     debug = {
       enabled = false,
       show_scores = true,
     },
-    lazy = false, -- the plugin lazy-initialises itself
     layout = {
       prompt_position = "top",
     },
@@ -19,6 +17,7 @@ return {
       move_down = { "<Down>", "<C-j>" },
     },
   },
+  lazy = false, -- the plugin lazy-initialises itself
   keys = {
     {
       "ff",
@@ -44,9 +43,10 @@ return {
     {
       "fc",
       function()
-        require("fff").live_grep({ query = vim.fn.expand("<cword>") })
+        require("fff").live_grep_under_cursor()
       end,
-      desc = "Search current word",
+      mode = { "n", "x" },
+      desc = "Search current word / selection",
     },
   },
 }

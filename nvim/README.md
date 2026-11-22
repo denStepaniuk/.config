@@ -1,14 +1,4 @@
-LazyVim: follow initial setup and must have tools.
+# 💤 LazyVim
 
-Some quality of life settings:
-Add to .zshrc or similar shell config file:
-*TMUX: 
-- convenient sessions profiler:
-tm() {
-  [[ -z "$1" ]] && { tmux ls; return; }
-  tmux new-session -A -s "$1"
-}
-*FZF:
-# Set up fzf key bindings and fuzzy completion, allows to use ** + TAB button
-source <(fzf --zsh)
-
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
